@@ -54,7 +54,7 @@ def fav_language():
     return l_lang
 
 
-def recap(name, color, age, language):
+def recap(name, color, age, language, percent_gpa):
     print("I had such a great conversation with you " + name + ".")
     time.sleep(2)
     print("Let me quickly recap everything I just found out about you!")
@@ -62,6 +62,7 @@ def recap(name, color, age, language):
     print("You're favorite color is " + color + ".")
     time.sleep(2)
     print("Currently, you are likely " + str(age) + " years old.")
+    print("You had a pretty good GPA percentage, it was " + percent_gpa ".")
     time.sleep(2)
     print("Your favorite programming language is " + language + ". That's a good one.")
     time.sleep(2)
@@ -86,8 +87,10 @@ color = fav_color() # calls fav_color and stores result in color
 time.sleep(2)
 language = fav_language()  # calls fav_language and stores result in language
 time.sleep(2)
+gpa = float(input("What was your high school GPA? "))
+percent_gpa = gpa / 4
 
-recap(name, color, age, language)
+recap(name, color, age, language, percent_gpa)
 
 
 
